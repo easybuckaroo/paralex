@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="paralex.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .not-paralex {
+            background: #00aeee;
+            foreground: "";
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Paralex</h1>
+
+<h3>Lightweight Parallax simiar effects. Can be placed under any HTML element.</h3>
+<p><strong>Sizes:</strong> Third, Half, Full screen. Area will auto-expand to forground text size.</p>
+<p><strong>Scroll Speed:</strong> Slow, Medium, Fast. Changes size of background image, effect of moving at different rates.</p>
+<p><strong>Background effect:</strong> Scroll with mouse, Scroll Reverse of mouse, Fixed background</p>
+<p><strong>Background inline styles:</strong> background, background-position, opacity</p>
+<ul>
+	<li>Background position is a focal point, when the background image is cropped to fit in area, cropped image will focus on the background position.</li>
+	<li>Opacity: 0.3 is nice for dark text.</li>
+</ul>
+<p><pre>
+    &lt;div class="paralex"&gt;
+        &lt;div class="background" style="background: url('https://...');"&gt;&lt;/div&gt;
+        &lt;div class="foreground"&gt;"Put Content Here"&lt;/div&gt;
+    &lt;/div&gt;
+</pre></p>
+<div class="not-paralex"> Blue spacer for demo only.
+</div>
+
+<div class="paralex slow">
+    <div class="background" style="
+  background: url('https://picsum.photos/g/1919/1079?random');
+  background-position-x: 50%;
+  background-position-y: 50%;
+  opacity: 1;">
+    </div>
+    <div class="foreground"></div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1918/1078?random'); background-position-x: left;"></div>
+    <div class="foreground">paralex third medium</div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex fast">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1917/1077?random'); background-position-x: left;"></div>
+    <div class="foreground">
+        <p>Area will expand to fit content.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Feugiat nibh sed pulvinar proin. Ullamcorper velit sed ullamcorper morbi tincidunt ornare. Lorem ipsum dolor sit amet. Facilisi morbi tempus iaculis urna id. Porttitor lacus luctus accumsan tortor posuere ac. Faucibus in ornare quam viverra orci sagittis eu volutpat odio. At consectetur lorem donec massa sapien. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Nulla facilisi nullam vehicula ipsum a arcu cursus.</p>
+
+        <p>Facilisis volutpat est velit egestas dui. Molestie a iaculis at erat pellentesque adipiscing commodo. Facilisi cras fermentum odio eu. Posuere urna nec tincidunt praesent semper. Blandit aliquam etiam erat velit scelerisque. Ut consequat semper viverra nam libero justo laoreet sit amet. Amet dictum sit amet justo donec. Vulputate dignissim suspendisse in est ante. Euismod in pellentesque massa placerat duis. Amet aliquam id diam maecenas ultricies mi eget mauris. Sem et tortor consequat id porta nibh venenatis cras sed. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam eget. Dictumst vestibulum rhoncus est pellentesque elit. Tellus in hac habitasse platea dictumst. Pellentesque sit amet porttitor eget dolor. Diam donec adipiscing tristique risus nec feugiat in fermentum posuere.</p>
+
+        <p>Turpis egestas maecenas pharetra convallis posuere. Et molestie ac feugiat sed lectus vestibulum mattis. Nam at lectus urna duis convallis convallis. Euismod quis viverra nibh cras pulvinar. Enim sed faucibus turpis in eu. Malesuada nunc vel risus commodo viverra maecenas accumsan lacus vel. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Nulla porttitor massa id neque aliquam vestibulum morbi blandit cursus. Vel eros donec ac odio tempor orci dapibus ultrices. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. In hac habitasse platea dictumst quisque sagittis purus sit amet. Suspendisse faucibus interdum posuere lorem ipsum dolor. Risus quis varius quam quisque id diam vel quam. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant morbi. Ultrices dui sapien eget mi proin. Risus sed vulputate odio ut enim blandit volutpat maecenas. Tristique senectus et netus et. Ultricies tristique nulla aliquet enim tortor at. Aliquet nec ullamcorper sit amet risus nullam eget. Eros in cursus turpis massa tincidunt dui ut ornare.</p>
+
+        <p>Tristique magna sit amet purus gravida. Purus faucibus ornare suspendisse sed nisi lacus sed viverra. Est ante in nibh mauris. Aliquet risus feugiat in ante metus. Tempus iaculis urna id volutpat. Diam vulputate ut pharetra sit amet. Turpis cursus in hac habitasse platea. Nunc id cursus metus aliquam eleifend. Amet cursus sit amet dictum sit amet justo donec enim. Amet venenatis urna cursus eget nunc scelerisque. Sed nisi lacus sed viverra tellus in hac habitasse. Tincidunt nunc pulvinar sapien et ligula. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus. Facilisi nullam vehicula ipsum a arcu. Feugiat nisl pretium fusce id velit ut tortor pretium. Est ultricies integer quis auctor. Nunc faucibus a pellentesque sit amet porttitor eget dolor. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend.</p>
+
+        <p>Leo a diam sollicitudin tempor id. Nunc mattis enim ut tellus elementum sagittis vitae et leo. Amet commodo nulla facilisi nullam vehicula ipsum a arcu. Scelerisque purus semper eget duis at tellus at. Lectus arcu bibendum at varius vel pharetra vel turpis. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Risus feugiat in ante metus dictum at tempor commodo ullamcorper. Fermentum odio eu feugiat pretium nibh ipsum consequat. Cursus sit amet dictum sit amet justo. Velit laoreet id donec ultrices. Porttitor massa id neque aliquam vestibulum morbi. Quam elementum pulvinar etiam non quam lacus suspendisse. Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Id porta nibh venenatis cras sed felis. Nisl pretium fusce id velit. Enim blandit volutpat maecenas volutpat. Pharetra sit amet aliquam id diam. Sed enim ut sem viverra aliquet eget sit amet tellus. Aliquam sem fringilla ut morbi tincidunt augue. Sed cras ornare arcu dui vivamus arcu.</p>
+
+    </div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex half slow">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1923/1083?random'); background-position-x: 20%;"></div>
+    <div class="foreground">paralex half slow</div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex half">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1922/1082?random'); background-position-x: 40%; opacity: 0.3;">
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+        <p style="margin-left:40px;">Background Background</p>
+    </div>
+    <div class="foreground">
+        paralex half medium
+        <p>Foreground</p>
+        <p>Foreground</p>
+        <p>Foreground</p>
+        <p>Foreground</p>
+        <p>Foreground</p>
+        <p>Foreground</p>
+        <p>Foreground</p>
+        <p>Foreground</p>
+    </div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex half fast">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1916/1016?random'); background-position-x: 20%;background-position-y: 90%;"></div>
+    <div class="foreground">paralex half fast</div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex full slow">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1915/1075?random'); background-position-x: 60%;"></div>
+    <div class="foreground">paralex full slow</div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex full">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1925/1085?random'); background-position-x: 80%; opacity: 0.3;"></div>
+    <div class="foreground">
+        <p>paralex full medium</p>
+        <p>Sample of opacity</p>
+    </div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex full fast">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1921/1081?random'); background-position-x: right;"></div>
+    <div class="foreground">paralex full fast</div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex reverse third">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1914/1074?random'); background-position-x: center;"></div>
+    <div class="foreground">paralex reverse third</div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex reverse half">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1908/1068?random'); background-position-x: center;"></div>
+    <div class="foreground">paralex reverse half</div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex reverse full">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1912/1072?random'); background-position-x: center;"></div>
+    <div class="foreground">paralex reverse full</div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex fixed third">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1911/1071?random'); background-position-x: center;"></div>
+    <div class="foreground">paralex fixed third</div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex fixed half">
+    <div class="background" style="background: url('https://picsum.photos/g/1910/1070?random')"></div>
+    <div class="foreground">paralex fixed half</div>
+</div>
+<div class="not-paralex">
+</div>
+<div class="paralex fixed full">
+    <div class="background"
+         style="background: url('https://picsum.photos/g/1909/1009?random'); background-position-x: center;"></div>
+    <div class="foreground">paralex fixed full</div>
+</div>
+<div class="not-paralex">
+</div>
+
+<script src="paralex.js"></script>
+
+</body>
+</html>

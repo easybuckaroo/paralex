@@ -1,0 +1,37 @@
+.paralex {
+  position: relative;
+  height: auto;
+  z-index: 1;
+  border-radius: 0.0001px;
+  clip-path: inset(0 0 0 0);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.paralex .background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  transform: translateZ(0);
+  -moz-transform: translatez(0);
+  -ms-transform: translatez(0);
+  -o-transform: translatez(0);
+  -webkit-transform: translateZ(0);
+  -webkit-font-smoothing: antialiased; /* seems to do the same in Safari Family of Browsers*/
+}
+.paralex.fixed .background {
+  position: fixed;
+}
+.paralex .foreground {
+  display: block;
+  overflow: auto;
+}
