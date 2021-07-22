@@ -14,7 +14,7 @@ Background position is a focal point, when the background image is cropped to fi
 Opacity: 0.3 is nice for dark text.
 
 &nbsp;&nbsp;&lt;div class=&quot;paralex (default:third|half|full) (slow|default:medium|fast) (default:scroll|reverse|fixed)&quot;&gt;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;div class=&quot;background&quot; style=&quot;  (everthing except background: url is optional)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;background&quot; style=&quot;  (everthing except background: url is optional)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: url('https://...');<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity: 0.3;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position: center center; /*OR*/<br>
