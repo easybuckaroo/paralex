@@ -149,9 +149,10 @@ function paralexHeight() {
     var img = new Image();
     img.src = backgroundObject.css("background-image").replace(urlRegex, "$1");
     var backgroundImage = backgroundObject.css("background-image");
-    backgroundObject.css("background-color", "gray").css("background-image", "linear-gradient(110deg, gray, lightgray)");
+    var backgroundOpacity = backgroundObject.css("opacity");
+    backgroundObject.css("background-color", "gray").css("background-image", "linear-gradient(145deg, #0098db, #0098db, #0098db, #0098db, #0098db, #ffa02f, #fcd900, #00c7b2, #007b69)").css("opacity", "0.3");
     img.onload  = function () {
-      backgroundObject.fadeOut("fast").css("background-image", backgroundImage).fadeIn("fast");
+      backgroundObject.css("background-image", backgroundImage).css("opacity", backgroundOpacity).fadeIn();
       paralexBackgroundWidth[i] = this.width;
       paralexBackgroundHeight[i] = this.height;
       paralexBackgroundProportion[i] = this.width / this.height;
