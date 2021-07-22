@@ -25,9 +25,17 @@
 	<li>Opacity: 0.3 is nice for dark text.</li>
 </ul>
 <p><pre>
-    &lt;div class="paralex"&gt;
-        &lt;div class="background" style="background: url('https://...');"&gt;&lt;/div&gt;
-        &lt;div class="foreground"&gt;"Put Content Here"&lt;/div&gt;
+    &lt;div class="paralex (default:third|half|full) (slow|default:medium|fast) (default:scroll|reverse|fixed)"&gt;
+        &lt;div class="background" style="
+	   background: url('https://...');
+	   background-position: center center;
+	   background-position-x: 50%;
+	   background-position-y: 50%;
+	   opacity: 0.3;
+	   "&gt;&lt;/div&gt;
+        &lt;div class="foreground"&gt;
+        Content Content Content	
+	&lt;/div&gt;
     &lt;/div&gt;
 </pre></p>
 <div class="not-paralex"> Blue spacer for demo only.
