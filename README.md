@@ -18,7 +18,7 @@ Opacity: 0.3 is nice for dark text.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: url('https://...');<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity: 0.3;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position: center center; /\*OR\*/<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position-x: 50%;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position-x: 50%; /\*x and y are the focal point of the image, when crop happens.\*/<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position-y: 50%;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
