@@ -12,18 +12,18 @@ Background inline styles: background, background-position, opacity
 Background position is a focal point, when the background image is cropped to fit in area, cropped image will focus on the background position.
 
 Opacity: 0.3 is nice for dark text.
-  <div class="paralex (default:third|half|full) (slow|default:medium|fast) (default:scroll|reverse|fixed)">
-    <div class="background" style="  (everthing except background: url is optional)
+  &lt;div class=&quot;paralex (default:third|half|full) (slow|default:medium|fast) (default:scroll|reverse|fixed)&quot;&gt;
+    div class=&quot;background&quot; style=&quot;  (everthing except background: url is optional)
        background: url('https://...');
        opacity: 0.3;
        background-position: center center; /*OR*/
        background-position-x: 50%;
        background-position-y: 50%;
-       ">
-    </div>
-    <div class="foreground">
+       &quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;foreground&quot;&gt;
      Content Content Content	
-    </div>
-  </div>
+    &lt;/div&gt;
+  &lt;/div&gt;
   
 If you need assistance dbrabon@gmail.com
