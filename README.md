@@ -17,7 +17,7 @@ Opacity: 0.3 is nice for dark text.
 &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;background&quot; style=&quot;  (everthing except background: url is optional)<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background: url('https://...');<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;opacity: 0.3;<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position: center center; /*OR*/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position: center center; /\1*OR\*/<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position-x: 50%;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-position-y: 50%;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;&gt;<br>
