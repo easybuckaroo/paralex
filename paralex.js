@@ -20,7 +20,7 @@ var paralexBackgroundProportion = [];
 var paralexBackgroundResized = [];
 var paralexIsMobile = paralexMobileCheck();
 var paralexDeprecated = paralexDeprecatedBrowser();
-
+var paralexResizeEvent = false;
 // paralexMove
 // calculates the background image height and top position based on section's styles
 function paralexMove(){
@@ -42,7 +42,9 @@ function paralexMove(){
     var backgroundPercentTopAdjust = 0;
     var backgroundMinHeight = 0;
     var effect_scroll_distance = 0;
-    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+    var onScreen = ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element));
+    var resetTriggered = paralexBackgroundResized.includes(-1);
+    if (onScreen || resetTriggered) {
       var paralexFixed = false;
       if( $(this).parent(".paralex").hasClass("reverse") ) {
         if( $(this).parent(".paralex").hasClass("full") ) {
@@ -67,7 +69,7 @@ function paralexMove(){
         backgroundMinHeight = height_of_background;
         fixed_background_height = height_of_background;
       }
-      if( !paralexBackgroundResized.includes(i) ) {
+      if( !paralexBackgroundResized.includes(i) || resetTriggered ) {
         if( paralexBackgroundProportion[i] > (width_of_element / fixed_background_height)) {
           bg_size = "auto " + fixed_background_height + "px";
         } else {
@@ -78,17 +80,18 @@ function paralexMove(){
           .css("background-size", bg_size);
         paralexBackgroundResized.push(i);
       }
-      if( !paralexFixed ) {
+      if( !paralexFixed && onScreen) {
         $(this).siblings(".background").css("top", backgroundPercentTopAdjust + "px");
       }
-      $(this).siblings(".background").show();
     } else {
-      $(this).siblings(".background").hide();
       if( paralexBackgroundResized.includes(i) ) {
         paralexBackgroundResized.splice(paralexBackgroundResized.indexOf(i), 1);
       }
     }
   });
+  if( paralexBackgroundResized.includes(-1) ) {
+    paralexBackgroundResized.splice(paralexBackgroundResized.indexOf(-1), 1);
+  }
 }
 
 // paralexHeight
@@ -142,9 +145,13 @@ function paralexHeight() {
       jQuery(this).parent(".paralex").removeClass("fixed");
     }
     // This will resize an image onload to avoid jumps and tiling.
+    var backgroundObject = jQuery(this).siblings(".background");
     var img = new Image();
-    img.src = jQuery(this).siblings(".background").css("background-image").replace(urlRegex, "$1");
-    img.onload = function () {
+    img.src = backgroundObject.css("background-image").replace(urlRegex, "$1");
+    var backgroundImage = backgroundObject.css("background-image");
+    backgroundObject.css("background-color", "gray").css("background-image", "linear-gradient(110deg, gray, lightgray)");
+    img.onload  = function () {
+      backgroundObject.fadeOut("fast").css("background-image", backgroundImage).fadeIn("fast");
       paralexBackgroundWidth[i] = this.width;
       paralexBackgroundHeight[i] = this.height;
       paralexBackgroundProportion[i] = this.width / this.height;
@@ -171,8 +178,17 @@ jQuery(window).resize(function() {
   } else {
     paralexMove();
   }
+  paralexResizeEvent = true;
 });
 jQuery(window).on( "orientationchange", function () {
   paralexReset();
-  setTimeout(paralexReset, 500);
+  paralexResizeEvent = true;
+});
+// resizes all background images away from the scroll and resize events to increase performance.
+jQuery(window).on( "mouseover" , function () {
+  if(paralexResizeEvent) {
+    paralexResizeEvent = false;
+    paralexBackgroundResized = [-1];
+    paralexMove();
+  }
 });
